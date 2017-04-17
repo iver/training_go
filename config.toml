@@ -1,3 +1,11 @@
-baseURL = "http://docs.iver.mx/"
-languageCode = "en-us"
-title = "Golang Training"
+baseurl         = "/"
+theme           = "minion"
+languageCode    = "en-us"
+title           = "Golang Training"
+canonifyurls    = true
+
+[params]
+  googleAnalytics = ""
+  name            = "Iván Jaimes"
+  description     = "Primer sesión de entrenamiento con Go"
+  custom_css      = ["custom.css"]
