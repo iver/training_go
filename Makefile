@@ -7,15 +7,23 @@ CONFIG := config.toml
 export ACTUAL
 export SOURCE
 
+help:
+	@echo -e "Golang Training. \n\nComandos disponibles:"
+	@echo -e "\tmake install\t Instala el proyecto"
+	@echo -e "\tmake start\t Inicia la presentación"
+	@echo -e "\tmake debug\t Ejecuta el proyecto en modo debug"
+	@echo -e "\tmake clean\t Limpia el proyecto"
+
 install:
 	@./bash/install.sh
 
-test:
+start:
 	@hugo server --verbose \
 		--logFile=log/build.log \
 		--buildDrafts \
 		--enableGitInfo \
-		-t ${THEME};
+		-t ${THEME} &
+	open http://localhost:1313/;
 
 debug:
 	@hugo server --verbose \
